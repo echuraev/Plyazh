@@ -3,10 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>Пряж - see you at the beach</title>
-		<link href="styles/styles.css" rel="stylesheet" type="text/css">
-		<script src="js/jquery-1.4.4.min.js"></script>
-		<script src="js/slides.min.jquery.js"></script>
+		<title>Пряж - see you at the beach | Главная</title>
+		<? include_once("include/head_static.php") ?>
 		<script>
 			$(function(){
 				$('.slides').slides({
@@ -33,11 +31,13 @@
 		</script>
 	</head>
 	<body>
-		<div class="header">
-			<div class="header_text">&nbsp;</div>
-			<div class="lang_box">
-				<a class="lang_ru" href="#">&nbsp;</a><a class="lang_en" href="#">&nbsp;</a>
-			</div>
+		<? include_once("include/header.php") ?>
+		<div class="nav">
+			<ul class="nav-bar">
+				<li class="active"><a href="#">Главная</a></li>
+				<li><a href="./program.php">Программа</a></li>
+				<li><a href="./register.php">Регистрация</a></li>
+			</ul>
 		</div>
 		<div class="content">
 			<h1>Куда приводит выпускной!</h1>
