@@ -4,4 +4,7 @@
 <script src="../js/jquery-1.4.4.min.js"></script>
 <script src="../js/slides.min.jquery.js"></script>
 <script src="../bootstrap.min.js"></script>
-<? include_once '../include/db.php'; ?>
+<? 
+include_once 'include/common_func.php'; 
+include_once '../include/db.php';
+?>
