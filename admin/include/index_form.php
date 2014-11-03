@@ -40,5 +40,7 @@
 	{
 		errMsg($result);
 	}
-	exit("<html><head><meta http-equiv='Refresh' content='0; URL=index.php'></head></html>");
+	else {
+		exit("<html><head><meta http-equiv='Refresh' content='0; URL=index.php'></head></html>");
+	}
 }?>

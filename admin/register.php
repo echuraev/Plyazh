@@ -16,13 +16,13 @@
 		<div class="nav">
 			<div class="nav-hide-borders">
 				<? if (!strcmp($_SESSION['lang'], "en")) { ?>
-				<div class="nav-member3 active"><a href="#">Main page</a></div>
+				<div class="nav-member3"><a href="./index.php">Main page</a></div>
 				<div class="nav-member3"><a href="./program.php">Program</a></div>
-				<div class="nav-member3"><a href="./register.php">Registration</a></div>
+				<div class="nav-member3 active"><a href="#">Registration</a></div>
 				<? } else { ?>
-				<div class="nav-member3 active"><a href="#">Главная страница</a></div>
+				<div class="nav-member3"><a href="./index.php">Главная страница</a></div>
 				<div class="nav-member3"><a href="./program.php">Программа</a></div>
-				<div class="nav-member3"><a href="./register.php">Регистрация</a></div>
+				<div class="nav-member3 active"><a href="#">Регистрация</a></div>
 				<? } ?>
 			</div>
 		</div>
@@ -32,7 +32,7 @@
 			if (!empty($_SESSION['id']))
 			{
 				$lang = (!strcmp($_SESSION['lang'], "en")) ? "en" : "ru";
-				$result = mysql_query("SELECT * FROM pages WHERE name='main' AND lang='".$lang."'");
+				$result = mysql_query("SELECT * FROM pages WHERE name='register' AND lang='".$lang."'");
 				if (mysql_num_rows($result) == 0)
 				{
 					$title = "";
@@ -77,14 +77,6 @@
 				       	</div>
 					</div>
 					<div class="form-group">
-						<label for="slide_tag" class="col-sm-2 control-label">
-						<? echo (!strcmp($_SESSION['lang'], "en")) ? "Slideshow tag:" : "Тег для слайд-шоу:"; ?> 
-						</label>
-						<label id="slide_tag" class="col-sm-9 control-label" style="text-align: left;">
-						&lt;slideshow-tag/&gt; 
-						</label>
-					</div>
-					<div class="form-group">
 						<label for="content" class="col-sm-2 control-label">
 						<? echo (!strcmp($_SESSION['lang'], "en")) ? "Text:" : "Текст:"; ?> 
 						</label>
@@ -99,12 +91,13 @@
 							</button>
 						</div>
 					</div>
-				</form>   
+				</form> 
 			<? }
 			else
 			{
-				include("./include/index_form.php");
+				exit("<html><head><meta http-equiv='Refresh' content='0; URL=index.php'></head></html>");
 			} ?>
         </div>
 	</body>
 </html>
+

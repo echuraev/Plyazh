@@ -1,3 +1,4 @@
+<meta name="Robots" content="NONE" />
 <link href="../styles/styles.css" rel="stylesheet" type="text/css">
 <link href="styles/admin_styles.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="./styles/redactor.css" />		
@@ -16,6 +17,6 @@
 	);
 </script>
 <? 
-include_once 'include/common_func.php'; 
+include_once 'include/common_admin.php'; 
 include_once '../include/db.php';
 ?>
