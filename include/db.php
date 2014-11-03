@@ -1,4 +1,7 @@
 <?
+// Start session
+session_start();
+
 // Create connection
 $db_server = "localhost";
 $db_user = "echuraev";

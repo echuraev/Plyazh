@@ -9,11 +9,11 @@
 	<body>
 		<? include_once("include/header.php") ?>
 		<div class="nav">
-			<ul class="nav-bar">
-				<li><a href="./">Главная</a></li>
-				<li class="active"><a href="#">Программа</a></li>
-				<li><a href="./register.php">Регистрация</a></li>
-			</ul>
+			<div class="nav-hide-borders">
+				<div class="nav-member3"><a href="./index.php">Главная</a></div>
+				<div class="nav-member3 active"><a href="#">Программа</a></div>
+				<div class="nav-member3"><a href="./register.php">Регистрация</a></div>
+			</div>
 		</div>
 		<div class="content">
 			<h1>Куда приводит выпускной!</h1>

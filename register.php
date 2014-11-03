@@ -9,16 +9,34 @@
 	<body>
 		<? include_once("include/header.php") ?>
 		<div class="nav">
-			<ul class="nav-bar">
-				<li><a href="./">Главная</a></li>
-				<li><a href="./program.php">Программа</a></li>
-				<li class="active"><a href="#">Регистрация</a></li>
-			</ul>
+			<div class="nav-hide-borders">
+				<div class="nav-member3"><a href="./index.php">Главная</a></div>
+				<div class="nav-member3"><a href="./program.php">Программа</a></div>
+				<div class="nav-member3 active"><a href="#">Регистрация</a></div>
+			</div>
 		</div>
 		<div class="content">
-			<h1>Куда приводит выпускной!</h1>
-			<p>Впервые в России мы организуем поездку на море для всех российских студентов. Поездка включает в себя полный пакет с учетом перелета, трансфера, проживания в отеле, питания, напитков и развлечений. Днем - пляжный волейбол, лимбо, speedating и многое другое ! Вечером - легендарные тематические DJs пати. Это твой шанс отпраздновать окончание ВУЗа вместе со всеми студентами. 
-Короче говоря, если ты хочешь прочувствовать сумасшедшую атмосферу и повеселится с друзьями - отправляйся на ПЛЯЖ!!!</p>
+			<h1>Регистрация участников программы!</h1>
+			<p>Для регистрации в программе вам необходимо зарегистрироваться на нашем сайте или послать анкету на наш e-mail: <a href="mailto:plyazh@example.com?subject=Registration">plyazh@example.com</a></p>
+			<form class="form-horizontal">
+				<div class="form-group">
+					<label for="name" class="col-sm-2 control-label">Имя: </label>
+					<div class="col-sm-9">
+			        	<input class="form-control" name="name" placeholder="Имя" id="name" />
+			       	</div>
+				</div>
+				<div class="form-group">
+					<label for="sec_name" class="col-sm-2 control-label">Фамилия: </label>
+					<div class="col-sm-9">
+			        	<input class="form-control" name="sec_name" placeholder="Фамилия" id="sec_name" />
+			       	</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-8">
+						<button type="submit" name="regButton" class="btn btn-default">Зарегистрироваться</button>
+					</div>
+				</div>
+			</form>
         </div>
 	</body>
 </html>

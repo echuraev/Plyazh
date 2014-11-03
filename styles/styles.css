@@ -1,6 +1,6 @@
 html {
 	height: 100%;
-	background: url(../img/Spring.png) no-repeat center center fixed;
+	background: url(../img/style/Spring.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -28,8 +28,7 @@ h1 {
 	height: 100px;
 	padding: 10px;
 	margin-bottom: 10px;
-	/*background: url(../img/logo_with_text.png);*/
-	background: url(../img/logo_new.png);
+	background: url(../img/style/logo_new.png);
 	background-position-x:10px;
 	background-repeat:no-repeat;
 	
@@ -44,7 +43,7 @@ h1 {
 }
 
 .header_text {
-	background: url(../img/header_text.png);
+	background: url(../img/style/header_text.png);
 	background-position: center;
 	background-repeat: no-repeat;
 	margin 10px;
@@ -53,6 +52,23 @@ h1 {
 	position: absolute;
 	vertical-align: middle;
 	left: 30%
+}
+
+.login_box {
+	color: #F7F7F7;
+	position: absolute;
+	right: 5px;
+	top: 5px;
+}
+
+.login_box a:link, .login_box a:visited {
+	text-decoration: none;
+	color: #F7F7F7;
+}
+
+.login_box a:hover, .login_box a:active {
+	text-decoration: underline;
+	color: #F7F7F7;
 }
 
 .lang_box {
@@ -103,39 +119,44 @@ h1 {
 	-moz-border-radius: 20px 20px 20px 20px;
 	-webkit-border-radius: 20px 20px 20px 20px;
 	background-color: rgba(255, 255, 255, 0.5);
-}
-
-.nav-bar {
-	padding-left: 0;
-	margin-bottom: 0;
-	list-style: none;
-}
-
-.nav-bar li {
-	width: 1%;
-	float: none;
-	display: table-cell;
 	text-align: center;
+	overflow:hidden;
 }
 
-.nav-bar > li > a {
-  margin-right: 2px;
-  line-height: 1.42857143;
-  border: 1px solid transparent;
-  border-radius: 4px 4px 0 0;
+.nav-hide-borders {
+	width: 101%; 
+	position: relative; 
+	left: -3px;
 }
-.nav-bar > li > a:hover {
-  border-color: #eee #eee #ddd;
+
+.nav-member3 {
+	width: 33%;
+	height: 100%;
+	float:left;
+	text-align: center;
+	border-left: 1px solid #222222;
+	border-right: 1px solid #222222;
+	background-color: rgba(0, 0, 0, 0.5); /* Для старых браузров */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.5));
+    display: inline;
 }
-.nav-bar > li.active > a,
-.nav-bar > li.active > a:hover,
-.nav-bar > li.active > a:focus {
-  color: #555;
-  cursor: default;
-  background-color: #fff;
-  border: 10px solid #000;
-  border-bottom-color: transparent;
+
+.active {
+	background-color: rgba(255, 255, 255, 0.5); /* Для старых браузров */
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
 }
+
+.nav-member3 a:link, .nav-member3 a:visited {	
+	text-decoration: none;
+	line-height: 50px;
+	color: #222222;
+}
+.nav-member3 a:active, .nav-member3 a:hover {
+	text-decoration: underline;
+	line-height: 50px;
+	color: #222222;
+}
+
 /* NAV STYLES END */
 
 /* CONTENT STYLES START */
@@ -152,7 +173,7 @@ h1 {
 
 /* SLIDE SHOW STYLES START */
 
-.slides a:link, .slides a:visited, .slides a:hover, .slides a:active, .slides a:focus {
+.slides a:link, .slides a:visited, .slides a:hover, .slides a:active {
 	text-decoration: none;
 	border: 0px;
 }

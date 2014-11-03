@@ -48,6 +48,7 @@ function signIn($login, $passwd)
 	}
 	
 	$_SESSION['id'] = $myrow['ID']; 
+	$_SESSION['login'] = $myrow['login']; 
 	
 	return 0;
 }
