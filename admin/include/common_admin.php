@@ -1,7 +1,5 @@
 <?
 
-include_once '../include/db.php';
-
 function msgPage ($text) 
 {
 	$back_text = (!strcmp($_SESSION['lang'], "ru")) ? "Вернуться назад" : "Back";

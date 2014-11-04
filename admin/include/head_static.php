@@ -17,6 +17,5 @@
 	);
 </script>
 <? 
-include_once 'include/common_admin.php'; 
-include_once '../include/db.php';
+include_once 'include/common_admin.php';
 ?>
