@@ -1,6 +1,6 @@
 <?php 
 // Dir with pictures
-$dir = '../../img/';
+$dir = './img/';
 
 // Check file type
 $_FILES['file']['type'] = strtolower($_FILES['file']['type']);

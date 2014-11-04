@@ -32,13 +32,13 @@
 		$passwd = "";
 	if (empty($login) or empty($passwd))
 	{
-		errMsg("Login or Password field is empty!");
+		msgPage("Login or Password field is empty!");
 	}
 				
 	$result = signIn($login, $passwd);
 	if (strcmp($result, "0"))
 	{
-		errMsg($result);
+		msgPage($result);
 	}
 	else {
 		exit("<html><head><meta http-equiv='Refresh' content='0; URL=index.php'></head></html>");

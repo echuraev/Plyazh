@@ -1,6 +1,6 @@
 <?php
 
-$dir = "../../files/";
+$dir = "./files/";
 
 copy($_FILES['file']['tmp_name'], $dir.$_FILES['file']['name']);
 		

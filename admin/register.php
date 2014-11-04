@@ -29,26 +29,42 @@
 		<? } ?>
 		<div class="content">
 			<? 
-			if (!empty($_SESSION['id']))
+			if (isset($_POST['saveButton']))
 			{
+				$title = (isset($_POST['web_title'])) ? $_POST['web_title']: "";
+				$description = (isset($_POST['description'])) ? $_POST['description']: "";
+				$keywords = (isset($_POST['keywords'])) ? $_POST['keywords']: "";
+				$text = (isset($_POST['content'])) ? $_POST['content']: "";
 				$lang = (!strcmp($_SESSION['lang'], "en")) ? "en" : "ru";
-				$result = mysql_query("SELECT * FROM pages WHERE name='register' AND lang='".$lang."'");
-				if (mysql_num_rows($result) == 0)
+				$sql = "UPDATE pages SET title='".$title."', description='".$description."', keywords='".$keywords."', text='".$text."' WHERE name='register' AND lang='".$lang."'";
+				$result = mysql_query ($sql);
+				if ($result == 'true') 
+					$ret_text = (!strcmp($_SESSION['lang'], "en")) ? "Information has been updated successfully!" : "Информация успешно обновлена!";
+				else 
+					$ret_text = (!strcmp($_SESSION['lang'], "en")) ? "Error! Cannot update info in db." : "Ошибка! Не могу обновить информацию в базе данных.";
+				msgPage($ret_text);
+			}
+			else {
+				if (!empty($_SESSION['id']))
 				{
-					$title = "";
-					$description = "";
-					$keywords = "";
-					$text = "";
-				}
-				else {
-					$myrow = mysql_fetch_array($result);
-					$title = $myrow['title'];
-					$description = $myrow['description'];
-					$keywords = $myrow['keywords'];
-					$text = $myrow['text'];
-				}
+					$lang = (!strcmp($_SESSION['lang'], "en")) ? "en" : "ru";
+					$result = mysql_query("SELECT * FROM pages WHERE name='register' AND lang='".$lang."'");
+					if (mysql_num_rows($result) == 0)
+					{
+						$title = "";
+						$description = "";
+						$keywords = "";
+						$text = "";
+					}
+					else {
+						$myrow = mysql_fetch_array($result);
+						$title = $myrow['title'];
+						$description = $myrow['description'];
+						$keywords = $myrow['keywords'];
+						$text = $myrow['text'];
+					}
 			?>
-				<form class="form-horizontal">
+				<form class="form-horizontal" action="./register.php" method="post">
 					<div class="form-group">
 						<label for="web_title" class="col-sm-2 control-label">
 						<? echo (!strcmp($_SESSION['lang'], "en")) ? "Web page title:" : "Название страницы:"; ?>
@@ -96,7 +112,7 @@
 			else
 			{
 				exit("<html><head><meta http-equiv='Refresh' content='0; URL=index.php'></head></html>");
-			} ?>
+			} } ?>
         </div>
 	</body>
 </html>

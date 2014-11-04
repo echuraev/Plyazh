@@ -2,9 +2,12 @@
 
 include_once '../include/db.php';
 
-function errMsg ($text) 
+function msgPage ($text) 
 {
-	echo "<p>".$text."</p><p><a href='index.php'>Back</a></p>";
+	$back_text = (!strcmp($_SESSION['lang'], "ru")) ? "Вернуться назад" : "Back";
+	$main_text = (!strcmp($_SESSION['lang'], "ru")) ? "Вернуться на главную" : "Back to the main page";
+	$link = (@$_SERVER['HTTP_REFERER'] != '') ? "<a href=".$_SERVER['HTTP_REFERER'].">".$back_text."</a>" : "<a href='./index.php'>".$main_text."</a>";
+	echo "<p>".$text."</p><p>".$link."</p>";
 }
 
 function signIn($login, $passwd) 

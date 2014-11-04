@@ -43,8 +43,6 @@ else {
 		</div>
 		<div class="content">
 			<? echo $text; ?>
-			<h1>Регистрация участников программы!</h1>
-			<p>Для регистрации в программе вам необходимо зарегистрироваться на нашем сайте или послать анкету на наш e-mail: <a href="mailto:plyazh@example.com?subject=Registration">plyazh@example.com</a></p>
 			<form class="form-horizontal">
 				<div class="form-group">
 					<label for="name" class="col-sm-2 control-label">Имя: </label>
